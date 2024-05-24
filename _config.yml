@@ -13,6 +13,12 @@ permalink: /:title/
 
 # Authors
 authors:
+  zaky:
+    name: Zaky Hermawan
+    display_name: Zaky Hermawan
+    avatar: 'assets/images/black_dragon.jpg'
+    description: "I like DSP, compiler, and system programming"
+
   sal:
     name: Sal
     display_name: Sal
