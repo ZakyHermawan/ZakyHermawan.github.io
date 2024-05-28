@@ -14,7 +14,7 @@ I will be working on GRC: Standalone application and pluggable workflows, mentor
 
 Currently I have finished the option block modularization, and already make an attempt on workflow separation. Actually, it already works, but i will make some improvements on the workflow separation, so it will be more modular.
 
-More detail about this project can be found [https://drive.google.com/drive/folders/1m5-KBWnnGckdlMTegBPwxyAzJwkCMuug](Here)
+More detail about this project can be found [here](https://drive.google.com/drive/folders/1m5-KBWnnGckdlMTegBPwxyAzJwkCMuug)
 
 
 
