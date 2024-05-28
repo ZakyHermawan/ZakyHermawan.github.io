@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hello everyone"
+title:  "Week 0: Introduction"
 author: zaky
 categories: [ gsoc ]
 image: assets/images/12.jpg
