@@ -17,7 +17,7 @@ comments: true
 
   <h4>Questions ?</h4>
 
-  <p>Head over to GSoC<a href="https://developers.google.com/open-source/gsoc/faq">FAQ</a>!</p>
+  <p>Head over to GSoC <a href="https://developers.google.com/open-source/gsoc/faq">FAQ</a>!</p>
 
   </div>
 </div>
