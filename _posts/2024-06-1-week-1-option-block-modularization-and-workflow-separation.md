@@ -220,7 +220,7 @@ def test_generator():
 ```
 
 The workflow_paths array will be used to tell the platform object to also read the workflows files.
-You can call the test with:
+You can call the test with: `pytest test_generator.py`
 ![test generator](/assets/images/test_generator.png)
 
 ## Conclusion
