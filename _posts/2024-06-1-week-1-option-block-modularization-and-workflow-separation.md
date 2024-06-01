@@ -64,11 +64,14 @@ When the GRC is initiating a flow graph, it will call `Platform.make_flow_graph`
 With this, all information about workflows already being consumed by option block. When user changing output language or generate_options, `rewrite` method will be called, the `rewrite` method in option block will change available options in `generate_options` parameter based on the current value of `output_language`. 
 
 ![python output language](/assets/images/python_output_language.png)
+
 For this case, if the output value is `Python`, the generate options will be:
 ![python generate options](/assets/images/python_generate_options.png)
 
 ![cpp output language](/assets/images/cpp_output_language.png)
+
 If output value is `C++`, the generate options will be:
+
 ![python generate options](/assets/images/python_generate_options.png)
 
 With this, options block modularization is finished :D
