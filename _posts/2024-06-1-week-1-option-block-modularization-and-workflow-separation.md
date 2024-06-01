@@ -66,13 +66,13 @@ With this, all information about workflows already being consumed by option bloc
 ![python output language](/assets/images/python_output_language.png)
 
 For this case, if the output value is `Python`, the generate options will be:
-![python generate options](/assets/images/python_generate_options.png)
+![[python] generate options](/assets/images/python_generate_options.png)
 
 ![cpp output language](/assets/images/cpp_output_language.png)
 
 If output value is `C++`, the generate options will be:
 
-![python generate options](/assets/images/python_generate_options.png)
+![cpp generate options](/assets/images/cpp_generate_options.png)
 
 With this, options block modularization is finished :D
 
