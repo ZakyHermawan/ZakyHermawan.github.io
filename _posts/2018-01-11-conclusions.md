@@ -3,7 +3,7 @@ layout: post
 title:  "Final week: Conclusions"
 author: zaky
 categories: [ gsoc ]
-# image: assets/images/11.jpg
+image: assets/images/gnuradio.jpg
 featured: true
 hidden: true
 ---

@@ -3,7 +3,7 @@ layout: post
 title:  "Week 0: Introduction"
 author: zaky
 categories: [ gsoc ]
-image: assets/images/12.jpg
+image: assets/images/gsoc_pict.jpg
 featured: true
 hidden: true
 ---
