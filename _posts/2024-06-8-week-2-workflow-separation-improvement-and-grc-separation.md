@@ -79,5 +79,5 @@ $ grc
 ## Conclusion
 * Workflow-dependant parameter have been moved into its own workflow YAML files
 * People now can define their own parameter by modifying their own workflow YAML file
-* Now GRC Already have a separate repo
+* Now GRC already have a separate repo
 * Now GRC is a submodule of GNU Radio
