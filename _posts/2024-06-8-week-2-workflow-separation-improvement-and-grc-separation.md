@@ -26,43 +26,53 @@ dict(id='cmake_opt',
     hide="${ ('part' if output_language == 'cpp' else 'all') }",
 ),
 ```
-To make it more modular, we move these parameters into each cpp workflows. Also, with previous code, people cannot actually making their own parameter without modifying the options block. To fix this issue, we a function to update parameters and call it inside the rewrite method.
+
+To make it more modular, we move these parameters into each cpp workflows. Also, with previous code, people cannot actually making their own parameter without modifying the options block. To fix this issue, each workflow-dependant parameters will be read and get inserted into `self.workflow_params`.
 ```py
-def update_parameters_from_workflow(self) -> None:
+def parse_workflows(self) -> None:
+    for workflow in self.workflows:
+        # ...
+
+        params = workflow.parameters
+        for param in params:
+            param['workflow'] = workflow.id
+            self.workflow_params.append(param)
+```
+
+Then each time rewrite function getting called, call `update_params_hide` to show/hide parameters based on current workflow
+```py
+def update_params_hide(self) -> None:
+    """
+    update hide attributes of self.parameters
+    """
     new_params_from_workflow = self.current_workflow.parameters
     if new_params_from_workflow == None: # no additional parameter
         return
 
-    new_params_data = build_params(
-        params_raw=new_params_from_workflow,
-        have_inputs=False,
-        have_outputs=False,
-        flags=Block.flags,
-        block_id=self.key
-    )
+    # if the parameters already been updated for current workflow, then do nothing
+    if self.params['current_workflow'].get_value() == self.current_workflow.id:
+        return
 
-    for data in new_params_data:
-        data['workflow_origin'] = self.current_workflow.id
+    additional_params = []
+    for param in self.workflow_params:
+        if param['workflow'] == self.current_workflow.id:
+            additional_params.append(param)
 
-    new_params: typing.OrderedDict[str, Param] = (OrderedDict(
-        (data['id'], param_factory(parent=self, **data)) for data in new_params_data))
+    for param in additional_params:
+        self.params[param['id']].hide = param.get('hide')
 
-    for key, val in new_params.items():
-        if not self.params.get(key):
-            self.params[key] = val
+    self.params['current_workflow'].set_value(self.current_workflow.id)
 ```
-The new parameters will be appended to self.params, each diffrent parameters should have unique id accross every workflows, make sure that if the parameter is defined in multiple workflow, they have exact attributes. Also, note that because we just appending each new parameters into existing parameters, people need to write the hide attribute of each method so that it would be invisible from another unrelated workflow. For example in python hier block qt gui workflow, the parameter is:
+
+Now people can just insert their own parameter inside the workflow YAML file
 ```yaml
 parameters:
 -   id: category
     label: Category
     dtype: string
     default: '[GRC Hier Blocks]'
-    hide: ${ ('none' if generate_options.startswith('hb') else 'all') }
+    hide: 'none'
 ```
-this category parameter will only be visible if the workflow is a hier block (cpp_hb_nogui, cpp_hb_qt_gui, python_hb_nogui, python_hb_qt_gui). Also, this parameter is defined inside that 4 diffrent hier block workflows. For each hier block workflows, they have same category parameter with exactly same attributes (id, label, dtype, default, and hide).
-
-With this, people can define their own parameters inside their `workflow.yml` file. Just make sure they have unique id vs other diffrent parameters. Also, if you want to add this new parameter, you need to write the hide attribute so that it would be invisible from another unrelated workflow
 
 # GRC Separation
 Another milestone of this GSoC project is to make grc as a standalone app with separate repository. In order to achieve that, first, a separate grc repository need to be made, then we make the grc directory in GNU Radio codebase into gitmodule that refer to its own repository. With this, nothing is changed in gnuradio codebase.
