@@ -76,8 +76,8 @@ $ pip install .
 $ grc
 ```
 
-## Conclusion
+## Conclusions
 * Workflow-dependant parameter have been moved into its own workflow YAML files
 * People now can define their own parameter by modifying their own workflow YAML file
-* Now GRC already have a separate repo
+* Now GRC have a separate repository
 * Now GRC is a submodule of GNU Radio

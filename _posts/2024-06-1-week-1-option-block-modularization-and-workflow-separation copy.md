@@ -226,7 +226,7 @@ The workflow_paths array will be used to tell the platform object to also read t
 You can call the test with: `pytest test_generator.py`
 ![test generator](/assets/images/test_generator.png)
 
-## Conclusion
+## Conclusions
 * The option block has been modularized by implementing it in Python instead of using a YAML file.
 * The workflows are now more modular and pluggable. People can easily insert their own workflows by creating a workflow folder inside the `grc/workflows` directory and following the existing workflow format.
 * The tests have already been completed.
