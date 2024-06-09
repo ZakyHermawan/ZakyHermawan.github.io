@@ -58,6 +58,10 @@ def update_params_hide(self) -> None:
         if param['workflow'] == self.current_workflow.id:
             additional_params.append(param)
 
+    for key, _ in self.params.items():
+        if key not in self.default_ids:
+            self.params[key].hide = 'all'
+
     for param in additional_params:
         self.params[param['id']].hide = param.get('hide')
 
