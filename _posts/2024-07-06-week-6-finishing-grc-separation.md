@@ -21,7 +21,7 @@ in GNU Radio, we use relative import in our tests, this is not correct, while do
 Before this week, im runnig main function from main.py and compiler.py, after i realized that, there is script called gnuradio-companion and grcc, which what gnuradio usually execute when we write gnuradio-companion or grcc in commandline. So im making our entry point to execute gnuradio-companion/grcc. instead of main.py/compiler.py.
 
 # Testing
-The test is consist of 3 parts. First is to generate code and execute code from flow 11 diffrent graphs, then run `make install` and `pytest`.
+The test is consist of 3 parts. First is to generate code and execute code from 11 diffrent graphs, then run `make install` and `pytest`.
 
 # Git Hooks ?
 I promised that I will make git hooks for GNU Radio in my proposal, especially pre-commit, because the problem with our source code is that people need to run autoformatter script by themself to pass code style checks. We can automate this process by running autoformat script when people want to commit their work. But I will make this feature only after every PR on my grc separation is being merged.
