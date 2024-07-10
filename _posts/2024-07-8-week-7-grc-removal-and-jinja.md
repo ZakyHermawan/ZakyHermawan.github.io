@@ -58,6 +58,9 @@ GR_REGISTER_COMPONENT("gnuradio-companion" ENABLE_GRC
 ...
 ```
 
+# Updating my previous work
+So, we deceided to make grc separation as a (kind of) separate project, that does not include any of my previous work. Because of this, my previous work (workflow separation) is kind of fall behind, before I go to the next step, I need to do git merge with my final work of grc separation (git merge with origin/grc-removal from my grc branch). Its lot of chaos to fix the conflicts, but I finally solved it, every tests is passed.
+
 # Jinja
 ???
 
