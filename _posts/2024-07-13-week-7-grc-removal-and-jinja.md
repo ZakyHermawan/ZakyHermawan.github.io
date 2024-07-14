@@ -3,9 +3,8 @@ layout: post
 title:  "Week 7: GRC Removal and Jinja"
 author: zaky
 categories: [ gsoc ]
-image: assets/images/4.jpg
+image: assets/images/pre-commit-pr.jpg
 ---
-
 This week, im removing grc completely from gnuradio codebase and doing research about jinja.
 
 # GRC Removal
@@ -61,8 +60,8 @@ GR_REGISTER_COMPONENT("gnuradio-companion" ENABLE_GRC
 # Updating my previous work
 So, we deceided to make grc separation as a (kind of) separate project, that does not include any of my previous work. Because of this, my previous work (workflow separation) is kind of fall behind, before I go to the next step, I need to do git merge with my final work of grc separation (git merge with origin/grc-removal from my grc branch). Its lot of chaos to fix the conflicts, but I finally solved it, every tests is passed.
 
-# Jinja
-???
+# Pre Commit Autoformat
+As stated in my proposal, I promised that I'm proposing to make autoformat as a pre commit hook, so people do not need to fix the code style by themself. I have made the pull request [here](https://github.com/gnuradio/gnuradio/pull/7431).
 
 # How to install GNU Radio + GRC
 You can either install GNU Radio first or GRC first, it does not matter.
@@ -74,4 +73,4 @@ You can either install GNU Radio first or GRC first, it does not matter.
 * Now GRC has been removed from gnuradio codebase
 * You can install grc using pip install
 * Now GRC GTK will have icon, no matter either you install GNU Radio or GRC first
-* Jinja: ?
+* I'm proposing the PR for autoformat pre commit has been made
