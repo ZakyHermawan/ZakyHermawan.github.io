@@ -73,4 +73,4 @@ You can either install GNU Radio first or GRC first, it does not matter.
 * Now GRC has been removed from gnuradio codebase
 * You can install grc using pip install
 * Now GRC GTK will have icon, no matter either you install GNU Radio or GRC first
-* I'm proposing the PR for autoformat pre commit has been made
+* The PR for autoformat pre commit has been made
