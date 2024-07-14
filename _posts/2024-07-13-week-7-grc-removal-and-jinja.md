@@ -3,7 +3,7 @@ layout: post
 title:  "Week 7: GRC Removal and auto format pre-commit"
 author: zaky
 categories: [ gsoc ]
-image: assets/images/pre-commit-pr.jpg
+image: assets/images/pre-commit-pr.png
 ---
 This week, im removing grc completely from gnuradio codebase and add auto format as a pre-commit git hook.
 
