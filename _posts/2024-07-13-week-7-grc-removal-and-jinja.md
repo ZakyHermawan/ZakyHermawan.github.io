@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Week 7: GRC Removal and Jinja"
+title:  "Week 7: GRC Removal and auto format pre-commit"
 author: zaky
 categories: [ gsoc ]
 image: assets/images/pre-commit-pr.jpg
 ---
-This week, im removing grc completely from gnuradio codebase and doing research about jinja.
+This week, im removing grc completely from gnuradio codebase and add auto format as a pre-commit git hook.
 
 # GRC Removal
 The main idea is to just remove grc folder from gnuradio codebase, this can be achieved by removing necessary cmake codes into root CMakeLists.txt of gnuradio, and also moving freedesktop folder into root of gnuradio, this freedesktop folder is used to install logo for gtk grc.
