@@ -16,7 +16,9 @@ I realize that I overcomplicate things by making abstract class and make abstrac
 I continue my work on jinja template support, there are so many limitation when using jinja template compared to mako template, for example,
 in mako template, you can just write the embedded python code directly, you can't do this directly in jinja. Let's take a look on how to do list comperhension
 in mako:
+```
 param_str = ', '.join(['self'] + ['%s=%s'%(param.name, param.templates.render('make')) for param in parameters])
+```
 
 to convert it to jinja, we need to do:
 {% raw %}

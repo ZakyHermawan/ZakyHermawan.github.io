@@ -1,7 +1,7 @@
 # Site
 name: "My Blog"
 title: "My Blog"
-description: "My Personal BLog"
+description: "My Personal Blog"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: https://zakyhermawan.github.io/
