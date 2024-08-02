@@ -33,6 +33,9 @@ to convert it to jinja, we need to do:
 ``` 
 {% endraw %}
 I for now, not every code from jinja template have been success fully generated, but im currently working on it!
+The code generation for python is successful and I passed the tests!
+
+Note: currently, the generated code will have too much newline, but I will fix it at the end as part of cleanup process
 
 ## Conclusions
 * The implementation of proxy need to be simplified
