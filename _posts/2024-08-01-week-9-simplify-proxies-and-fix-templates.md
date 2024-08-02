@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Week 8: GRC Removal and auto format pre-commit"
+title:  "Week 9: Simplify Proxies and fix templates"
 author: zaky
 categories: [ gsoc ]
 image: assets/images/partial_jinja_generated.png
