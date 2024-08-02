@@ -19,6 +19,7 @@ in mako:
 param_str = ', '.join(['self'] + ['%s=%s'%(param.name, param.templates.render('make')) for param in parameters])
 
 to convert it to jinja, we need to do:
+{% raw %}
 ```
 {% set parts = ['self'] %}
 
@@ -27,7 +28,8 @@ to convert it to jinja, we need to do:
 {% endfor %}
 
 {% set param_str = ', '.join(parts) %}
-```
+``` 
+{% endraw %}
 I for now, not every code from jinja template have been success fully generated, but im currently working on it!
 
 ## Conclusions
