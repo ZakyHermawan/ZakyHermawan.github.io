@@ -3,7 +3,7 @@ layout: post
 title:  "Week 8: GRC Removal and auto format pre-commit"
 author: zaky
 categories: [ gsoc ]
-image: assets/images/8.jpg
+image: assets/images/proxy-diagram.png
 ---
 This week, im making PRs and add proxy class to enable higher level API
 
