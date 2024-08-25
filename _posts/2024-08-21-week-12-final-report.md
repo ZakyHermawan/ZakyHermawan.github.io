@@ -77,8 +77,8 @@ You can verify the grc installation by doing `import gnuradio_companion`
 ![import gnuradio_companion](/assets/images/import-gnuradio_companion.png)
 
 Source Code: 
-Separated GRC Repository: https://github.com/ZakyHermawan/grc/tree/gsoc
-GNU Radio codebase after GRC being removed: https://github.com/ZakyHermawan/gnuradio/tree/grc-removal
+* [Separated GRC Repository](https://github.com/ZakyHermawan/grc/tree/gsoc)
+* [GNU Radio codebase after GRC being removed](https://github.com/ZakyHermawan/gnuradio/tree/grc-removal)
 
 # Pluggable workflow
 Another important milestone is to make workflows in GRC is pluggable, so people can make their own workflow.
@@ -178,8 +178,8 @@ with Cache(cache_file, version=self.config.version) as cache:
 ```
 
 Source Code:
-* Option Block Modularization: https://github.com/ZakyHermawan/grc/blob/gsoc/src/gnuradio_companion/core/blocks/options.py
-* Pluggable Workflow: https://github.com/ZakyHermawan/grc/tree/gsoc/src/gnuradio_companion/workflows
+* [Option Block Modularization](https://github.com/ZakyHermawan/grc/blob/gsoc/src/gnuradio_companion/core/blocks/options.py)
+* [Pluggable Workflow](https://github.com/ZakyHermawan/grc/tree/gsoc/src/gnuradio_companion/workflows)
 
 # Jinja Support
 The next milestone is to add make GRC support jinja templating as a template engine option for code generation. First, I edit options block to add template engine options to choose between using jinja or mako template engine.
@@ -302,15 +302,16 @@ Then, I make jinja template equivalent for every mako tempalte in each workflow.
 Why do we need Jinja as a template engine options ? Since we can let people to define their own workflow, might as well to make them easier to add workflow by using template engine that might be people have more familiarity with, we choose Jinja because it is used in many places, for example on popular web framework (flask), django also use jinja like syntax, Jinja is also used in devops (for example: to write config files)
 
 Source Code:
-* Every code generator on each workflows is updated, for example, on python qt gui workflow: https://github.com/ZakyHermawan/grc/blob/gsoc/src/gnuradio_companion/workflows/python_qt_gui/top_block.py
-* jinja template is added on each workflow, for example, on python qt gui workflow: https://github.com/ZakyHermawan/grc/blob/gsoc/src/gnuradio_companion/workflows/python_qt_gui/flow_graph_qt_gui.py.jinja
+* Every code generator on each workflows is updated, for example, on [python qt gui workflow](https://github.com/ZakyHermawan/grc/blob/gsoc/src/gnuradio_companion/workflows/python_qt_gui/top_block.py)
+* jinja template is added on each workflow, for example, on [python qt gui workflow](https://github.com/ZakyHermawan/grc/blob/gsoc/src/gnuradio_companion/workflows/python_qt_gui/flow_graph_qt_gui.py.jinja)
 
 # High Level API
 The last milestone is to provide High Level API via proxies, so that the code generator did not use any low level GRC API, this will make the API stable, if some changes being made on low level API, the old code generator did not break because we are using interface that is provided by proxies instead of calling the low level API itself.
 You can see the code on [BlockProxy.py](https://github.com/ZakyHermawan/grc/blob/gsoc/src/gnuradio_companion/core/generator/BlockProxy.py) and [FlowGraphProxy.py](https://github.com/ZakyHermawan/grc/blob/gsoc/src/gnuradio_companion/core/generator/FlowGraphProxy.py)
 
 Source Code: 
-* BlockProxy and FlowGraphProxy: https://github.com/ZakyHermawan/grc/tree/gsoc/src/gnuradio_companion/core/generator
+* [BlockProxy](https://github.com/ZakyHermawan/grc/blob/gsoc/src/gnuradio_companion/core/generator/BlockProxy.py)
+* [FlowGraphProxy](https://github.com/ZakyHermawan/grc/blob/gsoc/src/gnuradio_companion/core/generator/FlowGraphProxy.py)
 
 
 # Pre Commit Git Hooks
