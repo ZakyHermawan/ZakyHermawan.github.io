@@ -422,6 +422,7 @@ templates:
 
         else: self.stop(); self.wait()'
 ```
+
 9. Run `pip install .` in root grc folder
 10. You should see Additional Param in the options block dialog in If you select Bokeh GUI in Generate Options (this new param only available on bokeh gui generate options since we only edit for bokeh gui workflow on step 8)
 ![Bokeh GUI additional parameter](/assets/images/Bokeh-GUI-additional-parameter.png)
