@@ -347,7 +347,7 @@ Next we will try to add a new parameter to option block to show the option block
 
 8. Open `src/gnuradio_companion/workflows/python_bokeh_gui/python_bokeh_gui.workflow.yml`, and add additional_param by changing the YAML file to below:
 
-```YML
+```
 id: python_bokeh_gui_workflow
 description: "python bokeh gui workflow"
 output_language: python
